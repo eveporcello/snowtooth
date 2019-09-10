@@ -1,11 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-export const StatusIndicator = ({ status = "CLOSED" }) => (
+export const StatusIndicator = ({ status = "CLOSED", onChange = f => f }) => (
   <>
-    <Circle color="green" selected={status === "OPEN"} />
-    <Circle color="yellow" selected={status === "HOLD"} />
-    <Circle color="red" selected={status === "CLOSED"} />
+    <Circle
+      color="green"
+      selected={status === "OPEN"}
+      onClick={() => onChange("OPEN")}
+    />
+    <Circle
+      color="yellow"
+      selected={status === "HOLD"}
+      onClick={() => onChange("HOLD")}
+    />
+    <Circle
+      color="red"
+      selected={status === "CLOSED"}
+      onClick={() => onChange("CLOSED")}
+    />
   </>
 );
 
