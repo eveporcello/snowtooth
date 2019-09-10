@@ -1,6 +1,6 @@
 import React from "react";
 import { gql } from "apollo-boost";
-import { useQuery, useMutation } from "@apollo/react-hooks";
+import { useQuery, useMutation, useSubscription } from "@apollo/react-hooks";
 import { StatusIndicator } from "./StatusIndicator";
 
 const QUERY = gql`
@@ -23,9 +23,19 @@ const MUTATION = gql`
   }
 `;
 
+const SUBSCRIPTION = gql`
+  subscription {
+    liftStatusChange {
+      id
+      status
+    }
+  }
+`;
+
 function App() {
   const { loading, data } = useQuery(QUERY);
   const [setStatus] = useMutation(MUTATION);
+  useSubscription(SUBSCRIPTION);
 
   if (loading) return <p>loading lifts</p>;
 
