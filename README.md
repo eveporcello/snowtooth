@@ -2,7 +2,7 @@
 
 A real GraphQL project for a fake ski resort. ⛷
 
-This repo contains the demo files for the Modern Web Online React meetup for September 12.
+This repo contains the demo files for the Modern Web meetup for October 16. 
 
 ## In this Repo
 
@@ -22,4 +22,3 @@ Eve Porcello, Software Engineer & Instructor @ [Moon Highway](https://www.moonhi
 
 - [Twitter](https://twitter.com/eveporcello)
 - [Moon Highway Mailing List](http://bit.ly/moonhighway)
-- [GraphQL Workshop](https://graphqlworkshop.com): Workshops coming to Chicago, Boston, NYC, DC, Raleigh this fall
